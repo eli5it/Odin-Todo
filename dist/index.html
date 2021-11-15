@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eli's To-Do</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+    <div id="header">
+        
+        <h1 id="header-title"><i class="material-icons">check_box</i>
+            Todo List</h1>
+    </div>
+    <div id="content">
+        <div id = "sidebar">
+            <div class="time-button-container">
+                <button class="time-button"> Main</button>
+                <button class="time-button">Today</button>
+                <button class="time-button">This Week</button>
+                <button class="time-button">Future</button>
+            </div>
+            <div class="project-container">
+                <h3 id="project-heading">Projects</h3>
+                <div id="project-add-text-container">
+                    <i class="material-icons">&#xe147;</i> 
+                    <p id="project-add-text">Add a new Project</p>
+                    
+                </div>
+                
+                <div class="projects-container"></div>
+            </div>
+
+        </div>
+        <div id = "todo-container">
+            <div class="current-todo-group">
+                <div class="todo-item">
+                    <i class="material-icons checkbox">radio_button_unchecked</i>
+                    <p class="todo-item-text">fadfads</p>
+
+                </div>
+                <div class="todo-item">
+                    <i class="material-icons checkbox">radio_button_unchecked</i>
+                    <p class="todo-item-text"> adsf</p>
+
+                </div>
+                <div class="todo-item">
+                    <i class="material-icons checkbox">radio_button_unchecked</i>
+                    <p class="todo-item-text">sadffasd</p>
+
+                <form id="todo-textbox"></form>
+                </div>
+            <div class="selected-todo"></div>
+        </div>
+
+    </div>
+   
+
+    <script src="main.js"></script>
+</body>
+</html>

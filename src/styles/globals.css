@@ -1,0 +1,118 @@
+
+body, html {
+    min-height: 100vh;
+}
+body, html, #content {
+    min-width: 100vw;
+    margin: 0;
+}
+
+#header {
+    height: 10vh;
+    background-color: #f7f0f0;
+}
+
+#header-title{
+    margin: 0;
+}
+
+#content {
+    height: 90vh;
+    display: flex;
+    flex-direction: row;
+}
+
+#sidebar, #todo-container {
+    height: 100vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+
+#sidebar {
+    width: 18vw;
+    background-color: #DFE0E2;
+    padding: 1vw;
+    font-size: 40px;
+    
+}
+
+#todo-container {
+    width: 82vw;
+    
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.time-button-container {
+    display: flex;
+    flex-direction: column;
+    height: 20%;
+    justify-content: space-between;
+
+}
+
+
+.time-button, .project-button {
+    background-color: inherit;
+    border: none;
+    text-align: left;
+    font-size: 49%;
+    
+}
+
+#project-heading {
+    margin-bottom: 0px;
+}
+
+#project-add-text-container {
+    display: flex;
+    align-content: flex-end;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+#project-add-text{
+    margin: 0; 
+    margin-left: 2%;
+    font-size: 49%;
+}
+
+.button-on-hover {
+    background-color: tomato;
+}
+
+.selected-todo {
+    display: none;
+}
+
+
+.current-todo-group, .selected-todo {
+    background-color: #DFE0E2;
+    width: 30%;
+    height: 70%;
+    border-radius: 30px;
+    margin: 4%;
+    
+}
+
+
+
+.current-todo-group, .selected-todo-on{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1%;
+}
+
+.todo-item{
+    width: 90%;
+    margin: 2%;
+    height: 5%;
+    display: flex;
+    align-items: center;
+}
+
+.checkbox{
+    margin-right: 2%;
+}
