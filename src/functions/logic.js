@@ -1,10 +1,3 @@
-// to do factory
-// creates a new to-do
-
-// priority is 1-5 ranking w/ associated colors
-// group is a string (user creaetd )
-// drag down
-// date is idk?
 
 
 
@@ -59,7 +52,7 @@ function modifyPriority(index, num) {
 
 }
 
-export {createTodo, modifyPriority}
+export {createTodo, modifyPriority, addTodo}
 
 
 

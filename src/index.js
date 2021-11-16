@@ -8,6 +8,8 @@ import {loadDomElements} from './functions/dom'
 
 const todoArray = [];
 
+// separate array of projects
+const projectArray = [];
 
 
 

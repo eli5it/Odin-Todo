@@ -11,6 +11,43 @@ function createNewDomsGroup(str) {
 
 //
 
+// sets modal event listeners
+// specifically, I'm concerned with the list 
+// should have a hyper link that links to modal
+
+
+function setModalListlEventListener() {
+
+}
+
+function setModalOverlayListener() {
+    let overlay = document.querySelector('.modal-overlay');
+    overlay.addEventListener('click', () => {
+        toggleModalVisibility(overlay)
+    })
+}
+
+function setNewTodoListener() {
+    let todo = document.getElementById('new-todo-button');
+    todo.addEventListener('click', () => {
+        toggleModalVisibility(todo)
+    })
+    console.log('im working')
+}
+
+function toggleModalVisibility(modal) {
+    modal.classList.toggle('modal.visible')
+}
+
+// function setAddNewTodoListener() {
+//     let addButton = document.getElementById('new-todo-button');
+//     addButton.addEventListener('click', () => {
+//        displayTodoForm();
+//       })
+
+// }
+
+
 
 function setTodoItemListener(todoItem) {
     let secondPanel = document.querySelector('.selected-todo')
@@ -74,7 +111,7 @@ function setHovers() {
 }
 
 
-function setaddTodoListener() {
+function setAddProjectListener() {
     let div = document.getElementById('project-add-text-container')
     div.addEventListener('click', () => {
         displayProjectForm();
@@ -84,7 +121,11 @@ function setaddTodoListener() {
 function displayProjectForm() {
     console.log('I will ask people questions about their project')
 }
-// 
+
+// function displayTodoForm() {
+//     console.log('I will ask people questions about their todo item')
+// }
+// // 
 
 
 
@@ -245,7 +286,9 @@ function loadDomElements() {
     setHovers()
     setCheckboxListeners()
     setTodoItemListeners()
-    setaddTodoListener();
+    setAddProjectListener();
+    setNewTodoListener();
+    setModalOverlayListener();
 }
 
 

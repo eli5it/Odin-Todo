@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eli's To-Do</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    
+    
 </head>
 <body>
     <div id="header">
@@ -15,6 +19,11 @@
     </div>
     <div id="content">
         <div id = "sidebar">
+            <div id="new-todo-container">
+                <button id="new-todo-button">
+                    <a>+ New todo</a>
+                </button>
+            </div>
             <div class="time-button-container">
                 <button class="time-button"> Main</button>
                 <button class="time-button">Today</button>
@@ -52,11 +61,48 @@
                 <form id="todo-textbox"></form>
                 </div>
             <div class="selected-todo"></div>
+            
         </div>
 
+        </div>
     </div>
-   
+  
 
+    <div class="modal-overlay modal-closed" id="modal-overlay"></div>
+    <div class="modal modal-closed" id="new-todo-modal">
+        <div class="todo-modal-container">
+            <div class="modal-header">
+                <p class="modal-title">Create a New Todo</p>
+            </div>
+            <div class="modal-content">
+                <div class="left-container">
+                    <input type="text" placeholder="I am going to...">
+                    <div class="modal-cell">
+                        <div class="label-text">List</div>
+                    </div>
+                </div>
+                <div class="right-container">
+                   
+                    <div class="modal-cell">
+                        <div class="label-text">List</div>
+                    </div>
+                    <div class="modal-cell">
+                        <div class="label-text">Time</div>
+                    </div>
+                    <div class="modal-cell">
+                        <div class="label-text">Priority</div>
+                    </div>
+                </div>
+            </div>
+            <button class="modal-button">Create New Todo</button>
+           
+            
+            
+            
+        </div>
+    </div>
     <script src="main.js"></script>
 </body>
+
+    
 </html>
