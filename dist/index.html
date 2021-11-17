@@ -68,8 +68,29 @@
     </div>
   
 
-    <div class="modal-overlay modal-closed" id="modal-overlay"></div>
-    <div class="modal modal-closed" id="new-todo-modal">
+    <div class="modal-overlay modal-closed modals" id="modal-overlay"></div>
+    <div class="modal modals modal-closed" id="new-project-modal">
+        <div class="project-modal-container">
+            <div class="project-header">
+                Name This List
+            </div>
+            <div class="project-textbox-container">
+                <textarea class="project-textarea"></textarea>
+            </div>
+            <div class="project-button-container">
+                <button class="project-button cancel-button">  
+                    <span >cancel</span>
+                    </button>
+                <button class="project-button">
+                    <span>create</span>
+                </button>
+            </div>
+            
+
+        </div>
+    </div>
+    <div class="modal-overlay modal-closed modals" id="list-modal-overlay"></div>
+    <div class="modal modals modal-closed" id="new-todo-modal">
         <div class="todo-modal-container">
             <div class="modal-header">
                 <p class="modal-title">Create a New Todo</p>
@@ -78,13 +99,13 @@
                 <div class="left-container">
                     <input type="text" placeholder="I am going to...">
                     <div class="modal-cell">
-                        <div class="label-text">List</div>
+                        <div class="label-text">Notes</div>
                     </div>
                 </div>
                 <div class="right-container">
                    
                     <div class="modal-cell">
-                        <div class="label-text">List</div>
+                        <div class="label-text modal-list">List</div>
                     </div>
                     <div class="modal-cell">
                         <div class="label-text">Time</div>
@@ -100,6 +121,8 @@
             
             
         </div>
+        <div class="modals modal-closed list-modal"></div>
+
     </div>
     <script src="main.js"></script>
 </body>

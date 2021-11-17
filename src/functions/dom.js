@@ -9,34 +9,87 @@ function createNewDomsGroup(str) {
 
 
 
-//
 
-// sets modal event listeners
-// specifically, I'm concerned with the list 
-// should have a hyper link that links to modal
+
+
+
+function setModalButtonEventListener() {
+    let button = document.querySelector('.modal-button');
+    button.addEventListener('click', () => {
+        createDomTodo();
+        toggleModalVisibilities();
+    })
+}
+
+
+function setModalListEventListener() {
+    let listButton = document.querySelector('.modal-list');
+    let listModal = document.querySelector('.list-modal')
+    
+    listButton.addEventListener('click', () => {
+        toggleModalVisibility(listModal);
+    })
+    
+
+}
 
 
 function setModalListlEventListener() {
-
+    
 }
 
 function setModalOverlayListener() {
     let overlay = document.querySelector('.modal-overlay');
     overlay.addEventListener('click', () => {
-        toggleModalVisibility(overlay)
+        toggleModalVisibilities(overlay)
     })
 }
+
+
+function setNewProjectListener() {
+    let project = document.getElementById('project-add-text-container');
+    let cancelButton = document.querySelector('.cancel-button');
+    let overlay = document.querySelector('.modal-overlay');
+    let modal = document.querySelector('#new-project-modal')
+    project.addEventListener('click', () => {
+        toggleModalVisibility(overlay)
+        toggleModalVisibility(modal)
+    })
+    cancelButton.addEventListener('click', () => {
+        toggleModalVisibility(overlay)
+        toggleModalVisibility(modal)
+    })
+    
+}
+
+
+
 
 function setNewTodoListener() {
     let todo = document.getElementById('new-todo-button');
+    let overlay = document.querySelector('.modal-overlay');
+    let modal = document.querySelector('#new-todo-modal')
     todo.addEventListener('click', () => {
-        toggleModalVisibility(todo)
+        toggleModalVisibility(overlay)
+        toggleModalVisibility(modal)
     })
-    console.log('im working')
+    
 }
 
 function toggleModalVisibility(modal) {
-    modal.classList.toggle('modal.visible')
+    modal.classList.toggle('modal-closed')
+}
+
+
+
+
+
+function toggleModalVisibilities() {
+    let modalList = document.querySelectorAll('.modals');
+    modalList.forEach((modal) => {
+        if (!(modal.classList.contains('modal-closed')))
+        {toggleModalVisibility(modal)}
+    })
 }
 
 // function setAddNewTodoListener() {
@@ -111,16 +164,9 @@ function setHovers() {
 }
 
 
-function setAddProjectListener() {
-    let div = document.getElementById('project-add-text-container')
-    div.addEventListener('click', () => {
-        displayProjectForm();
-      })
-}
 
-function displayProjectForm() {
-    console.log('I will ask people questions about their project')
-}
+
+
 
 // function displayTodoForm() {
 //     console.log('I will ask people questions about their todo item')
@@ -177,7 +223,7 @@ function domDeleteTodo(dom_element) {
 // crucially, does not actually place that todo into the dom
 // createDomTodo's output is the input for appendChildTodo
 function createDomTodo(todo) {
-
+    console.log('imma create a todo on the dom')
 }
 
 
@@ -286,9 +332,12 @@ function loadDomElements() {
     setHovers()
     setCheckboxListeners()
     setTodoItemListeners()
-    setAddProjectListener();
     setNewTodoListener();
+    setNewProjectListener();
     setModalOverlayListener();
+    setModalButtonEventListener();
+    setModalListEventListener() 
+    
 }
 
 
