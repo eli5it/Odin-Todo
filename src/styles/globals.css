@@ -77,12 +77,19 @@ body, html, #content {
 }
 
 
-.time-button, .project-button {
+.time-button, .project-button, .new-project-button {
     background-color: inherit;
     border: none;
     text-align: left;
     font-size: 49%;
     
+}
+.projects-container {
+    width: 100%;
+}
+.new-project-button {
+    width:  100%;
+    height: 50px;
 }
 
 #project-heading {

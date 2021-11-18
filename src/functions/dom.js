@@ -49,8 +49,11 @@ function setModalOverlayListener() {
 function setNewProjectListener() {
     let project = document.getElementById('project-add-text-container');
     let cancelButton = document.querySelector('.cancel-button');
+    let createButton = document.querySelector('.create-button');
     let overlay = document.querySelector('.modal-overlay');
     let modal = document.querySelector('#new-project-modal')
+    let textbox = document.querySelector('.project-textarea')
+    
     project.addEventListener('click', () => {
         toggleModalVisibility(overlay)
         toggleModalVisibility(modal)
@@ -59,8 +62,33 @@ function setNewProjectListener() {
         toggleModalVisibility(overlay)
         toggleModalVisibility(modal)
     })
+    createButton.addEventListener('click', () => {
+        if (checkTextContent(textbox.value)) {
+            const textContent = textbox.value
+            createProjectElement(textContent)
+            toggleModalVisibility(overlay)
+            toggleModalVisibility(modal)
+        }
+        
+    })
     
 }
+
+function createProjectElement(text)  {
+    const container = document.querySelector('.projects-container');
+    const newProject = document.createElement('button');
+    
+    newProject.classList.add('new-project-button')
+    newProject.textContent = text
+    container.appendChild(newProject);
+}
+
+function checkTextContent(textbox) {
+    console.log(textbox)
+    return (textbox.length !== 0)
+}
+
+
 
 
 
@@ -136,7 +164,7 @@ function setCheckboxListeners() {
 }
 
 function setButtonHovers() {
-    let buttons = document.querySelectorAll('.time-button, .project-button')
+    let buttons = document.querySelectorAll('.sidebar-button, .project-button')
     buttons.forEach((button) => {
         setHover(button)
     })  
