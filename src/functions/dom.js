@@ -52,7 +52,10 @@ function setNewProjectListener() {
     let createButton = document.querySelector('.create-button');
     let overlay = document.querySelector('.modal-overlay');
     let modal = document.querySelector('#new-project-modal')
-    let textbox = document.querySelector('.project-textarea')
+    let textbox = document.querySelector('.project-textarea');
+    let listButton = document.querySelector('.modal-list')
+    let listOverlay = document.querySelector('.small-modal-overlay')
+    let listModal = document.querySelector(".list-modal")
     
     project.addEventListener('click', () => {
         toggleModalVisibility(overlay)
@@ -70,6 +73,10 @@ function setNewProjectListener() {
             toggleModalVisibility(modal)
         }
         
+    })
+    listButton.addEventListener('click', () => {
+        toggleModalVisibility(listOverlay)
+        toggleModalVisibility(listModal)
     })
     
 }

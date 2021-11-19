@@ -61,14 +61,15 @@
 
                 <form id="todo-textbox"></form>
                 </div>
-            <div class="selected-todo"></div>
+            
             
         </div>
+        <div class="selected-todo"></div>
 
         </div>
     </div>
   
-
+    <div class="small-modal-overlay modal-closed  modals" ></div>
     <div class="modal-overlay modal-closed modals" id="modal-overlay"></div>
     <div class="modal modals modal-closed" id="new-project-modal">
         <div class="project-modal-container">
@@ -90,7 +91,6 @@
 
         </div>
     </div>
-    <div class="modal-overlay modal-closed modals" id="list-modal-overlay"></div>
     <div class="modal modals modal-closed" id="new-todo-modal">
         <div class="todo-modal-container">
             <div class="modal-header">
@@ -117,12 +117,11 @@
                 </div>
             </div>
             <button class="modal-button">Create New Todo</button>
-           
-            
-            
+            <div class="modals small-modal list-modal"></div>
             
         </div>
-        <div class="modals modal-closed list-modal"></div>
+        
+        
 
     </div>
     <script src="main.js"></script>
